@@ -1,0 +1,14 @@
+{
+  "name": "urban-bot",
+  "version": "0.0.1",
+  "description": "Urban dictionary scrapper wrapped with Discord.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aakatev",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
