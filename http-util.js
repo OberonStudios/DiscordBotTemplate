@@ -1,4 +1,4 @@
-// Native node http/https modules wrapped with promises 
+// Native node https modules wrapped with promises 
 // Customized for this specific applcitaction
 let https = require('https');
 // Adjustable parameters
@@ -14,12 +14,16 @@ module.exports = class HttpUtil {
         reject(new Error(`${new Date()} - ${req_timeout}s timeout exceeded`));  
       }, req_timeout*1000);
 
-      // debugging url 
-      console.log(`https://www.${url}/${path}`);
-      https.get(`https://${url}/${path}`, (res) => {
+      // Debugging url 
+      // console.log(target_url);
+      
+      // IF desired address is accessable at www. only,
+      // you need to add www manually
+      let target_url = `https://${url}/${path}`; 
+      https.get(target_url, (res) => {
         // response status check
-        if (res.statusCode == 404 ) { // handle 404
-          resolve("404 not found!");
+        if (res.statusCode == 404 || res.statusCode == 403 ) { // handle 404
+          resolve("40x not found!");
         } else if (res.statusCode.toString(10).match(/30\d/g)) {  // handle 30x
           // debugging redirect url 
           // console.log(res.headers['location'].match(/define.*/g)[0]);

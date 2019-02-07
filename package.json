@@ -1,7 +1,7 @@
 {
-  "name": "urban-bot",
+  "name": "discord-bot-template",
   "version": "0.0.1",
-  "description": "Urban dictionary scrapper wrapped with Discord.js",
+  "description": "discord.js bot template",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

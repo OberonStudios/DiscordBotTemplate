@@ -8,8 +8,11 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
+  // User input formatting
   const args = message.content.trim().split(/ +/g);
+  // Getting command as first arg
   const command = args.shift().toLowerCase();
+
   const httpUtil = new HttpUtil();
 
   if(command === "whois") {

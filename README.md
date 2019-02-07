@@ -1,9 +1,31 @@
-# urban-bot
+# DiscordBotTemplate
 
-Urban dictionary regex scrapper wrapped with Discord.js (Node API)
+Discord.js bot template
 
-Add it to your Discord server using [this link](https://discordapp.com/oauth2/authorize?client_id=530775816003649546&scope=bot)!
+### Documentation
 
-Gets trigerred by <code>define <word[s]></code> command.
+#### Getting started
 
-If you want to run it, clone repo, do <code>npm i</code>, and put your token in <code>config.json</code>.
+First, make sure your system has node and npm installed. Then, clone repo and in project root directory run:
+
+```bash
+npm i
+``` 
+
+Next step is to create new application on [Discord Developer portal](https://discordapp.com/developers/applications/), and generate token for your bot. You should consult with Discord docs in that regard.
+
+After obtaining your token, add it to your config.json, so that it looks like that:
+```javascript
+{
+  "token": "AdffdfdsdfADADFAdafefd3453tdssa4pyGSERGeargfewgf49"
+}
+```
+
+Congratulations! Now you start using your Discord bot!
+
+#### Running
+
+To start bot, simply run:
+```bash
+npm app.js
+```
